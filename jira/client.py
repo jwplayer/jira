@@ -2817,7 +2817,7 @@ class JIRA(object):
     ):
         """Get a list of user Resources that match the specified search string.
 
-        :param user: a string to match usernames, name or email against.
+        :param query: a string to match usernames, name or email against.
         :type user: str
         :param startAt: index of the first user to return.
         :type startAt: int
@@ -2833,7 +2833,7 @@ class JIRA(object):
         :rtype: ResultList
         """
         params = {
-            "username": user,
+            "query": user,
             "includeActive": includeActive,
             "includeInactive": includeInactive,
         }
